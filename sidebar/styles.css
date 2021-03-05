@@ -1,0 +1,66 @@
+/** Overrides **/
+
+aside {
+  padding: 0;
+  width: 32em;
+}
+
+.sidebar-item {
+  margin: 0 1em;
+  /* padding: 0 1em; */
+}
+
+/** Tabs **/
+
+.tabs {
+  background-color: #171717;
+  border-bottom: 1px solid #ADADAD;
+  display: flex;
+  margin: 0;
+  padding: 0.3em 0.3em 0 0.3em;
+}
+
+.tabs a {
+  border: 1px solid transparent;
+  border-radius: 5px 5px 0 0;
+  font-size: 0.9em;
+  margin-bottom: -1px;
+  padding: 0.75em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tabs a:hover, .tabs a:active {
+  background-color: #2B2B2B;
+  border: 1px solid #ADADAD;
+}
+
+.tabs a.active {
+  border: 1px solid #ADADAD;
+  border-bottom: 1px solid #2B2B2B;
+  text-decoration: underline;
+}
+
+.tabs a.active {
+  background-color: #2B2B2B;
+  color: #ADADAD;
+}
+
+.tabs li.active a:hover {
+  text-decoration: none;
+}
+
+/** Tabs Content **/
+
+.tabs-content {
+
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: inherit;
+}
