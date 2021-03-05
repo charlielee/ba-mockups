@@ -5,6 +5,15 @@ aside {
   width: 32em;
 }
 
+aside li {
+  margin: 0.75em 0;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.25em;
+}
+
 .sidebar-item {
   margin: 0 1em;
 }
