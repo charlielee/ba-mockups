@@ -1,0 +1,188 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <title>Boats Animator (C:\Users\Charlie\Documents\ba)</title>
+  <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/animator.css">
+</head>
+
+<body data-has-frames="false">
+  <!-- Notification Bar -->
+  <section id="notification-container"></section>
+
+  <!--Loading Window-->
+  <div id="loading-window">
+    <h3 id="loading-window-message"></h3>
+    <div id="loading-window-dots">
+      <span class="dot one">.</span><span class="dot two">.</span><span class="dot three">.</span>
+    </div>
+  </div>
+
+  <main>
+    <section id="main-area">
+      <!--Preview area window-->
+      <div id="preview-area" class="capture-mode">
+        <!-- No source message -->
+        <div id="preview-area-message" class="visible-capture preview-area-item">
+          <h2>Select a camera source to begin!</h2>
+        </div>
+        <!--  Onion skinning frame -->
+        <img id="onion-skinning-frame" class="visible-capture">
+        <!-- Video preview stream -->
+        <video id="preview" class="visible-capture" autoplay="">Video stream not available.</video>
+        <!--The actual playback window -->
+        <canvas id="playback" class="visible-playback"></canvas>
+      <svg id="gridOverlay" xmlns="http://www.w3.org/2000/svg" style="z-index: 10;" class="preview-area-item"></svg><svg id="aspectRatioMask" xmlns="http://www.w3.org/2000/svg" style="z-index: 10;" class="preview-area-item"></svg></div>
+
+      <!--Playback controls-->
+      <div id="frame-mod-panel" class="flex">
+        <section id="left-controls" class="capture-mode">
+          <div id="frameControlsCaptureMode" class="visible-capture">
+            <div id="btn-delete-last-frame" title="Undo last frame" class="button">
+              <i class="fa fa-undo"></i>
+            </div>
+            <div id="btn-short-play" title="Short Play" class="button">
+              <i class="fa fa-play-circle"></i>
+            </div>
+          </div>
+          <div id="frameControlsPlaybackMode" class="visible-playback">
+            <div id="btn-delete-frame" title="Delete frame" class="button">
+              <i class="fa fa-trash"></i>
+            </div>
+          </div>
+        </section>
+        <section id="capture-control">
+          <div id="btn-capture-frame" title="Capture Frame" class="button">
+            <i class="fa fa-camera"></i>
+          </div>
+        </section>
+        <section id="playback-controls">
+          <div id="btn-frame-first" title="First frame" class="button">
+            <i class="fa fa-fast-backward"></i>
+          </div>
+          <div id="btn-frame-previous" title="Previous frame" class="button">
+            <i class="fa fa-step-backward"></i>
+          </div>
+          <div id="btn-play-pause" title="Playback Frames" class="button">
+            <i class="fa fa-play"></i>
+          </div>
+          <div id="btn-stop" title="Stop Playback" class="button">
+            <i class="fa fa-stop"></i>
+          </div>
+          <div id="btn-frame-next" title="Next frame" class="button">
+            <i class="fa fa-step-forward"></i>
+          </div>
+          <div id="btn-frame-last" title="Last frame" class="button">
+            <i class="fa fa-fast-forward"></i>
+          </div>
+          <div id="btn-loop" title="Loop Playback" class="button">
+            <i class="fa fa-refresh"></i>
+          </div>
+        </section>
+      </div>
+
+      <!--Frame-reel container-->
+      <div id="area-frame-reel">
+        <p>No frames captured</p>
+        <table class="hidden">
+          <tbody><tr id="reel-captured-imgs">
+            <!--This is where the frame is added through JS -->
+          </tr>
+          <tr>
+            <td class="frame-reel-preview">
+              <div class="frame-reel-no" id="live-view-frame-no"></div>
+              <div id="btn-live-view" title="Live Preview" class="selected">
+                <i class="fa fa-video-camera"></i>
+              </div>
+            </td>
+          </tr>
+        </tbody></table>
+      </div>
+
+      <div id="control-panel" class="flex">
+        <section id="preview-options">
+          <!--This area will contain features like grid and aspect ratio mask toggle-->
+        </section>
+        <section id="onion-skin-opacity-options">
+          <input id="input-onion-skin-opacity" type="range" name="onionSkinAmount" min="-100" max="100" value="0" title="0%" step="2">
+          <div id="slider-background-middle"></div>
+        </section>
+        <section id="frame-rate-options">
+          <input id="input-fr-change" type="number" value="15" min="1" max="60" title="Framerate">
+          <label for="input-fr-change"> FPS</label>
+        </section>
+      </div>
+    </section>
+
+    <!--Sidebar content-->
+    <aside>
+      <!--Capture Options-->
+      <div class="sidebar-item" id="capture-header">
+        <div class="sidebar-header">
+          <h2><i class="fa fa-camera fa-fw"></i> Capture</h2>
+        </div>
+        <ul id="capture-options">
+          <!-- Camera selection -->
+          <li id="camera-select-td">
+            <label>Camera source:</label>
+            <select>
+            <option disabled="true" style="display: none;" value="#">No camera selected</option><option value="3e96f2ff096c6326a64ce3140205f71649f9a1899101ea4049633f59ef8c259a">ManyCam Virtual Webcam</option><option value="a285aa47c8dd612c18bcfbcd99289c2b6465a0be752c7d5a57cc009fa68c3e22">Integrated Webcam </option><option value="ff1fd2c507a729c2ea084530ffbc94757e71c51b7e27358006da91573cdf68b0">AvStream Media Device </option><option value="41560f71a103823a1dd7df37e407c35c1a66231d86c835697cb71ae0b881c674">Logi Capture</option></select>
+          </li>
+          <!-- Resolution selection -->
+          <li id="resolution-select-td">
+            <label>Image resolution:</label>
+            <select id="form-resolution-select"></select>
+          </li>
+        </ul>
+      </div>
+
+      <!--Export Options-->
+      <div class="sidebar-item" id="export-header">
+        <div class="sidebar-header">
+          <h2>
+            <i class="fa fa-download fa-fw"></i> Export</h2>
+        </div>
+        <ul>
+          <li>Captured frames will be exported to:
+            <p id="currentDirectoryName" class="italics">C:\Users\Charlie\Documents\ba</p>
+          </li>
+          <li class="sidebar-opt">
+            <i class="fa fa-sort-asc fa-rotate-90 sidebar-link-dot"></i>
+            <span id="btn-dir-change">Change directory</span>
+          </li>
+          <li id="exportVideoSidebarOption" class="sidebar-opt">
+            <i class="fa fa-sort-asc fa-rotate-90 sidebar-link-dot"></i>
+            <span id="btn-export-video">Export video</span>
+          </li>
+        </ul>
+      </div>
+
+      <!--Preview Overlay-->
+      <div class="sidebar-item" id="overlay-header">
+        <div class="sidebar-header">
+          <h2>
+            <i class="fa fa-th fa-fw"></i> Overlays</h2>
+        </div>
+        <ul id="overlay-list"><li><div class="flex"><div>Grid</div><div data-id="gridOverlay" style="text-align: right" class="grid-overlay-toggle-btn"><i class="fa fa-toggle-off" title="Toggle on" style="font-size: 1.5em; cursor: pointer;"></i></div></div><div class="hidden flex"><select><option value="0">3:3</option><option value="1">2:2</option><option value="2">3:2</option><option value="3">4:4</option><option value="4">4:3</option></select><input type="range" min="0" max="1" step="0.02" value="0.75" style="margin: 0px 0px 0px 0.5em;"></div></li><li><div class="flex"><div>Aspect ratio</div><div data-id="aspectRatioMask" style="text-align: right" class="grid-overlay-toggle-btn"><i class="fa fa-toggle-off" title="Toggle on" style="font-size: 1.5em; cursor: pointer;"></i></div></div><div class="hidden flex"><select><option value="0">2.39:1</option><option value="1">2.35:1</option><option value="2">16:9</option><option value="3">4:3</option><option value="4">3:2</option><option value="5">1:1</option><option value="6">9:16</option></select><input type="range" min="0" max="1" step="0.02" value="0.75" style="margin: 0px 0px 0px 0.5em;"></div></li></ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <ul>
+      <li>Frame
+        <span id="current-frame">1</span> of
+        <span id="num-of-frames">0</span>
+      </li>
+      <li id="current-frame-rate">
+        <span>15</span> FPS
+      </li>
+      <li id="current-resolution">No camera selected</li>
+      <li class="no-pipe" id="current-mode">
+        <span>Capture</span> mode</li>
+    </ul>
+  </footer>
+</body>
+</html>
