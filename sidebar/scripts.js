@@ -19,6 +19,8 @@ window.addEventListener("load", function () {
       newTab.classList.add("active", true);
       newTabPane.classList.add("active", true);
     }
+
+    e.preventDefault();
   });
 
   /**
