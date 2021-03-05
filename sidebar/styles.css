@@ -18,6 +18,44 @@ label {
   margin: 0 1em;
 }
 
+.btn {
+  flex-direction: column;
+}
+
+.btn small {
+  margin-top: 0.5em;
+}
+
+.table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+}
+
+.table thead {
+  font-size: 0.9em;
+}
+
+.table tbody {
+  font-family: monospace;
+}
+
+.table td, .table th {
+  padding: 0.5em 0.25em;
+}
+
+.table thead tr {
+  background-color: rgba(23, 23, 23 , 0.8);
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: rgba(23, 23, 23 , 0.5);
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: rgba(23, 23, 23 , 0.8);
+}
+
 /** Tabs **/
 
 .tabs {
