@@ -2,7 +2,7 @@
 
 aside {
   padding: 0;
-  width: 28.7em;
+  width: 29.1em;
 }
 
 aside ul {
@@ -21,7 +21,7 @@ label {
 #animatorSidebar {
   border: 0;
   display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }
 
 .sidebar-item {
@@ -111,8 +111,12 @@ label {
 
 /** Tabs Content **/
 
-.tabs-content {
+.tabs-container {
   flex: 1;
+}
+
+.tabs-content {
+  /* flex: 1; */
   overflow: hidden;
 }
 
@@ -155,7 +159,7 @@ label {
   font-size: 0.2em;
   height: 100%;
   justify-content: center;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .panel-expander:hover {
@@ -167,8 +171,6 @@ label {
   background-color: #827E7E;
   color:#5C5858;
 }
-
-
 
 .panel-expander i {
   margin: 0.5em;

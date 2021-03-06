@@ -126,419 +126,421 @@
         <i class="fa fa-circle"></i>
       </div>
 
-      <div class="tabs">
-        <a href="#projectTab" data-toggle="tab">Project</a>
-        <a href="#captureTab" class="active" data-toggle="tab">Capture</a>
-        <a href="#xsheetTab" data-toggle="tab">X-sheet</a>
-        <a href="#overlaysTab" data-toggle="tab">Overlays</a>
-        <a href="#exportTab" data-toggle="tab">Export</a>
-        <a href="#" id="openSettingsModalBtn" title="Settings"><i class="fa fa-cog fa-fw"></i></a>
-      </div>
-
-      <div class="tabs-content">
-        <!--Project Explorer-->
-        <div id="projectTab" class="tab-pane">
-          <div class="sidebar-item" id="export-header">
-            <div class="sidebar-header">
-              <h2>
-                <i class="fa fa-archive fa-fw"></i> Project
-              </h2>
-            </div>
-
-            <ul>
-              <li class="sidebar-opt">
-                <p style="font-family: monospace;">The Great Film About Elephants</p>
-
-                <div class="btn-group">
-                  <button class="btn">
-                    <i class="fa fa-folder-o fa-fw fa-3x"></i>
-                    <small>Add Scene</small>
-                  </button>
-
-                  <button class="btn">
-                    <i class="fa fa-file-o fa-fw fa-3x"></i>
-                    <small>Add Take</small>
-                  </button>
-
-                  <button class="btn">
-                    <i class="fa fa-file-audio-o fa-fw fa-3x"></i>
-                    <small>Import Audio</small>
-                  </button>
-
-                  <button class="btn">
-                    <i class="fa fa-file-image-o fa-fw fa-3x"></i>
-                    <small>Import Frames</small>
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="sidebar-item">
-            <ul>
-              <li>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Date Modified</th>
-                      <th>Size</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <tr>
-                      <td>
-                        <i class="fa fa-chevron-down fa-fw" aria-hidden="true"></i>
-                        <a href="#">Scene 001</a>
-                      </td>
-
-                      <td>
-                        2021-02-03 13:09
-                      </td>
-
-                      <td>
-                        2 takes
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-file-o fa-fw" aria-hidden="true"></i>
-                        <a href="#">Take 001</a>
-                      </td>
-
-                      <td>
-                        2021-02-03 12:42
-                      </td>
-
-                      <td>
-                        200 frames
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-file-o fa-fw" aria-hidden="true"></i>
-                        <a href="#">Take 002</a>
-                      </td>
-
-                      <td>
-                        2021-02-03 13:09
-                      </td>
-
-                      <td>
-                        30 frames
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-chevron-down fa-fw" aria-hidden="true"></i>
-                        <a href="#">Audio</a>
-                      </td>
-
-                      <td>
-                        2021-02-03 13:05
-                      </td>
-
-                      <td>
-                        3 files
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-file-audio-o fa-fw" aria-hidden="true"></i>
-                        <a href="#">Hello.wav</a>
-                      </td>
-
-                      <td>
-                        2021-02-03 13:02
-                      </td>
-
-                      <td>
-                        0.1 MB
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-file-audio-o fa-fw" aria-hidden="true"></i>
-                        <a href="#">Boats.wav</a>
-                      </td>
-
-                      <td>
-                        2021-02-03 13:05
-                      </td>
-
-                      <td>
-                        0.4 MB
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-file-audio-o fa-fw" aria-hidden="true"></i>
-                        <a href="#">Rock.wav</a>
-                      </td>
-
-                      <td>
-                        2021-02-03 13:05
-                      </td>
-
-                      <td>
-                        0.1 MB
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
-                        <a href="#">Scene 002</a>
-                      </td>
-
-                      <td>
-                        2021-02-05 22:06
-                      </td>
-
-                      <td>
-                        8 takes
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <i class="fa fa-chevron-down fa-fw" aria-hidden="true"></i>
-                        <a href="#">Scene 003</a>
-                      </td>
-
-                      <td>
-                        2021-02-05 19:04
-                      </td>
-
-                      <td>
-                        0 takes
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
-                        <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
-                        <a href="#">Audio</a>
-                      </td>
-
-                      <td>
-                        2021-02-05 19:04
-                      </td>
-
-                      <td>
-                        2 files
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </li>
-            </ul>
-          </div>
+      <div class="tabs-container">
+        <div class="tabs">
+          <a href="#projectTab" data-toggle="tab">Project</a>
+          <a href="#captureTab" class="active" data-toggle="tab">Capture</a>
+          <a href="#xsheetTab" data-toggle="tab">X-sheet</a>
+          <a href="#overlaysTab" data-toggle="tab">Overlays</a>
+          <a href="#exportTab" data-toggle="tab">Export</a>
+          <a href="#" id="openSettingsModalBtn" title="Settings"><i class="fa fa-cog fa-fw"></i></a>
         </div>
 
-        <!--Capture Options-->
-        <div id="captureTab" class="tab-pane active">
-          <div class="sidebar-item" id="capture-header">
-            <div class="sidebar-header">
-              <h2><i class="fa fa-camera fa-fw"></i> Capture</h2>
+        <div class="tabs-content">
+          <!--Project Explorer-->
+          <div id="projectTab" class="tab-pane">
+            <div class="sidebar-item" id="export-header">
+              <div class="sidebar-header">
+                <h2>
+                  <i class="fa fa-archive fa-fw"></i> Project
+                </h2>
+              </div>
+
+              <ul>
+                <li class="sidebar-opt">
+                  <p style="font-family: monospace;">The Great Film About Elephants</p>
+
+                  <div class="btn-group">
+                    <button class="btn">
+                      <i class="fa fa-folder-o fa-fw fa-3x"></i>
+                      <small>Add Scene</small>
+                    </button>
+
+                    <button class="btn">
+                      <i class="fa fa-file-o fa-fw fa-3x"></i>
+                      <small>Add Take</small>
+                    </button>
+
+                    <button class="btn">
+                      <i class="fa fa-file-audio-o fa-fw fa-3x"></i>
+                      <small>Import Audio</small>
+                    </button>
+
+                    <button class="btn">
+                      <i class="fa fa-file-image-o fa-fw fa-3x"></i>
+                      <small>Import Frames</small>
+                    </button>
+                  </div>
+                </li>
+              </ul>
             </div>
 
-            <ul id="capture-options">
-              <!-- Camera selection -->
-              <li id="camera-select-td">
-                <label>Camera source:</label>
-                <select>
-                <option disabled="true" style="display: none;" value="#">No camera selected</option><option value="3e96f2ff096c6326a64ce3140205f71649f9a1899101ea4049633f59ef8c259a">ManyCam Virtual Webcam</option><option value="a285aa47c8dd612c18bcfbcd99289c2b6465a0be752c7d5a57cc009fa68c3e22">Integrated Webcam </option><option value="ff1fd2c507a729c2ea084530ffbc94757e71c51b7e27358006da91573cdf68b0">AvStream Media Device </option><option value="41560f71a103823a1dd7df37e407c35c1a66231d86c835697cb71ae0b881c674">Logi Capture</option></select>
-              </li>
+            <div class="sidebar-item">
+              <ul>
+                <li>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Date Modified</th>
+                        <th>Size</th>
+                      </tr>
+                    </thead>
 
-              <!-- Resolution selection -->
-              <li id="resolution-select-td">
-                <label>Image resolution:</label>
-                <select id="form-resolution-select"><option value="0">1280x720</option><option value="1">800x600</option><option value="2">640x480</option><option value="3">640x360</option></select>
-              </li>
-            </ul>
-          </div>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <i class="fa fa-chevron-down fa-fw" aria-hidden="true"></i>
+                          <a href="#">Scene 001</a>
+                        </td>
 
-          <div class="sidebar-item">
-            <ul>
-              <!--
-              <li class="capture-slider-group">
-                <label for="capturePanInput">Pan</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="capturePanInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureTiltInput">Tilt</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureTiltInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureRollInput">Roll</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureRollInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              -->
-              <li class="capture-slider-group">
-                <label for="captureZoomInput">Zoom</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureZoomInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureExposureInput">Exposure</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureExposureInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureIrisInput">Iris</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureIrisInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureFocusInput">Focus</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureFocusInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-            </ul>
-          </div>
+                        <td>
+                          2021-02-03 13:09
+                        </td>
 
-          <div class="sidebar-item">
-            <ul>
-              <li class="capture-slider-group">
-                <label for="captureBrightnessInput">Brightness</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureBrightnessInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureConstrastInput">Constrast</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureConstrastInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureHueInput">Hue</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureHueInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureSaturationInput">Saturation</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureSaturationInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureSharpnessInput">Sharpness</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureSharpnessInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <li class="capture-slider-group">
-                <label for="captureGammaInput">Gamma</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureGammaInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <!--
-              <li class="capture-slider-group">
-                <label for="captureColorEnableInput">Color Enable</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureColorEnableInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              -->
-              <li class="capture-slider-group">
-                <label for="captureWhiteBalanceInput">White Balance</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureWhiteBalanceInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              <!--
-              <li class="capture-slider-group">
-                <label for="captureBacklightCompensntion">Backlight Compensation</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureBacklightCompensntion" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-              -->
-              <li class="capture-slider-group">
-                <label for="captureGainInput">Gain</label>
-                <input type="number" value="5" class="capture-slider-value">
-                <input id="captureGainInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
-              </li>
-            </ul>
-          </div>
-        </div>
+                        <td>
+                          2 takes
+                        </td>
+                      </tr>
 
-        <!--X-Sheet-->
-        <div id="xsheetTab" class="tab-pane">
-          <div class="sidebar-item" id="export-header">
-            <div class="sidebar-header">
-              <h2>
-                <i class="fa fa-th fa-fw"></i> X-Sheet
-              </h2>
+                      <tr>
+                        <td>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-file-o fa-fw" aria-hidden="true"></i>
+                          <a href="#">Take 001</a>
+                        </td>
+
+                        <td>
+                          2021-02-03 12:42
+                        </td>
+
+                        <td>
+                          200 frames
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-file-o fa-fw" aria-hidden="true"></i>
+                          <a href="#">Take 002</a>
+                        </td>
+
+                        <td>
+                          2021-02-03 13:09
+                        </td>
+
+                        <td>
+                          30 frames
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-chevron-down fa-fw" aria-hidden="true"></i>
+                          <a href="#">Audio</a>
+                        </td>
+
+                        <td>
+                          2021-02-03 13:05
+                        </td>
+
+                        <td>
+                          3 files
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-file-audio-o fa-fw" aria-hidden="true"></i>
+                          <a href="#">Hello.wav</a>
+                        </td>
+
+                        <td>
+                          2021-02-03 13:02
+                        </td>
+
+                        <td>
+                          0.1 MB
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-file-audio-o fa-fw" aria-hidden="true"></i>
+                          <a href="#">Boats.wav</a>
+                        </td>
+
+                        <td>
+                          2021-02-03 13:05
+                        </td>
+
+                        <td>
+                          0.4 MB
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-file-audio-o fa-fw" aria-hidden="true"></i>
+                          <a href="#">Rock.wav</a>
+                        </td>
+
+                        <td>
+                          2021-02-03 13:05
+                        </td>
+
+                        <td>
+                          0.1 MB
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
+                          <a href="#">Scene 002</a>
+                        </td>
+
+                        <td>
+                          2021-02-05 22:06
+                        </td>
+
+                        <td>
+                          8 takes
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <i class="fa fa-chevron-down fa-fw" aria-hidden="true"></i>
+                          <a href="#">Scene 003</a>
+                        </td>
+
+                        <td>
+                          2021-02-05 19:04
+                        </td>
+
+                        <td>
+                          0 takes
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <i class="fa fa-circle fa-fw" style="opacity: 0;" aria-hidden="true"></i>
+                          <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
+                          <a href="#">Audio</a>
+                        </td>
+
+                        <td>
+                          2021-02-05 19:04
+                        </td>
+
+                        <td>
+                          2 files
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li>
-                <div class="btn-group">
-                  <button class="btn">
-                    <i class="fa fa-upload fa-fw fa-3x"></i>
-                    <small>Import X-Sheet</small>
-                  </button>
-
-                  <button class="btn">
-                    <i class="fa fa-share-square-o fa-fw fa-3x"></i>
-                    <small>Export X-Sheet</small>
-                  </button>
-                </div>
-              </li>
-            </ul>
           </div>
-        </div>
 
-        <!--Preview Overlay-->
-        <div id="overlaysTab" class="tab-pane">
-          <div class="sidebar-item" id="overlay-header">
-            <div class="sidebar-header">
-              <h2>
-                <i class="fa fa-window-maximize fa-fw" aria-hidden="true"></i>
-                Overlays
-              </h2>
+          <!--Capture Options-->
+          <div id="captureTab" class="tab-pane active">
+            <div class="sidebar-item" id="capture-header">
+              <div class="sidebar-header">
+                <h2><i class="fa fa-camera fa-fw"></i> Capture</h2>
+              </div>
+
+              <ul id="capture-options">
+                <!-- Camera selection -->
+                <li id="camera-select-td">
+                  <label>Camera source:</label>
+                  <select>
+                  <option disabled="true" style="display: none;" value="#">No camera selected</option><option value="3e96f2ff096c6326a64ce3140205f71649f9a1899101ea4049633f59ef8c259a">ManyCam Virtual Webcam</option><option value="a285aa47c8dd612c18bcfbcd99289c2b6465a0be752c7d5a57cc009fa68c3e22">Integrated Webcam </option><option value="ff1fd2c507a729c2ea084530ffbc94757e71c51b7e27358006da91573cdf68b0">AvStream Media Device </option><option value="41560f71a103823a1dd7df37e407c35c1a66231d86c835697cb71ae0b881c674">Logi Capture</option></select>
+                </li>
+
+                <!-- Resolution selection -->
+                <li id="resolution-select-td">
+                  <label>Image resolution:</label>
+                  <select id="form-resolution-select"><option value="0">1280x720</option><option value="1">800x600</option><option value="2">640x480</option><option value="3">640x360</option></select>
+                </li>
+              </ul>
             </div>
-            <ul id="overlay-list"><li><div class="flex"><div>Grid</div><div data-id="gridOverlay" style="text-align: right" class="grid-overlay-toggle-btn"><i class="fa fa-toggle-off" title="Toggle on" style="font-size: 1.5em; cursor: pointer;"></i></div></div><div class="hidden flex"><select><option value="0">3:3</option><option value="1">2:2</option><option value="2">3:2</option><option value="3">4:4</option><option value="4">4:3</option></select><input type="range" min="0" max="1" step="0.02" value="0.75" style="margin: 0px 0px 0px 0.5em;"></div></li><li><div class="flex"><div>Aspect ratio</div><div data-id="aspectRatioMask" style="text-align: right" class="grid-overlay-toggle-btn"><i class="fa fa-toggle-off" title="Toggle on" style="font-size: 1.5em; cursor: pointer;"></i></div></div><div class="hidden flex"><select><option value="0">2.39:1</option><option value="1">2.35:1</option><option value="2">16:9</option><option value="3">4:3</option><option value="4">3:2</option><option value="5">1:1</option><option value="5" class="capture-slider-value">9:16</option></select><input type="range" min="0" max="1" step="0.02" value="0.75" style="margin: 0px 0px 0px 0.5em;"></div></li></ul>
+
+            <div class="sidebar-item">
+              <ul>
+                <!--
+                <li class="capture-slider-group">
+                  <label for="capturePanInput">Pan</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="capturePanInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureTiltInput">Tilt</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureTiltInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureRollInput">Roll</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureRollInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                -->
+                <li class="capture-slider-group">
+                  <label for="captureZoomInput">Zoom</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureZoomInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureExposureInput">Exposure</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureExposureInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureIrisInput">Iris</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureIrisInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureFocusInput">Focus</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureFocusInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-item">
+              <ul>
+                <li class="capture-slider-group">
+                  <label for="captureBrightnessInput">Brightness</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureBrightnessInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureConstrastInput">Constrast</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureConstrastInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureHueInput">Hue</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureHueInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureSaturationInput">Saturation</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureSaturationInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureSharpnessInput">Sharpness</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureSharpnessInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <li class="capture-slider-group">
+                  <label for="captureGammaInput">Gamma</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureGammaInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <!--
+                <li class="capture-slider-group">
+                  <label for="captureColorEnableInput">Color Enable</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureColorEnableInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                -->
+                <li class="capture-slider-group">
+                  <label for="captureWhiteBalanceInput">White Balance</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureWhiteBalanceInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                <!--
+                <li class="capture-slider-group">
+                  <label for="captureBacklightCompensntion">Backlight Compensation</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureBacklightCompensntion" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+                -->
+                <li class="capture-slider-group">
+                  <label for="captureGainInput">Gain</label>
+                  <input type="number" value="5" class="capture-slider-value">
+                  <input id="captureGainInput" type="range" min="0" max="10" step="1" value="5" style="margin: 0px 0px 0px 0.5em;">
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <!--Export Options-->
-        <div id="exportTab" class="tab-pane">
-          <div class="sidebar-item" id="export-header">
-            <div class="sidebar-header">
-              <h2>
-                <i class="fa fa-download fa-fw"></i> Export</h2>
+          <!--X-Sheet-->
+          <div id="xsheetTab" class="tab-pane">
+            <div class="sidebar-item" id="export-header">
+              <div class="sidebar-header">
+                <h2>
+                  <i class="fa fa-th fa-fw"></i> X-Sheet
+                </h2>
+              </div>
+              <ul>
+                <li>
+                  <div class="btn-group">
+                    <button class="btn">
+                      <i class="fa fa-upload fa-fw fa-3x"></i>
+                      <small>Import X-Sheet</small>
+                    </button>
+
+                    <button class="btn">
+                      <i class="fa fa-share-square-o fa-fw fa-3x"></i>
+                      <small>Export X-Sheet</small>
+                    </button>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li>Render current take as a video file:</li>
-              <li class="sidebar-opt">
-                <i class="fa fa-sort-asc fa-rotate-90 sidebar-link-dot"></i>
-                <span id="btn-dir-change">Export Video</span>
-              </li>
-            </ul>
+          </div>
 
-            <ul>
-              <li>Confirm current take:</li>
-              <li class="sidebar-opt">
-                <i class="fa fa-sort-asc fa-rotate-90 sidebar-link-dot"></i>
-                <span id="btn-dir-change">Confirm Take</span>
-              </li>
-            </ul>
+          <!--Preview Overlay-->
+          <div id="overlaysTab" class="tab-pane">
+            <div class="sidebar-item" id="overlay-header">
+              <div class="sidebar-header">
+                <h2>
+                  <i class="fa fa-window-maximize fa-fw" aria-hidden="true"></i>
+                  Overlays
+                </h2>
+              </div>
+              <ul id="overlay-list"><li><div class="flex"><div>Grid</div><div data-id="gridOverlay" style="text-align: right" class="grid-overlay-toggle-btn"><i class="fa fa-toggle-off" title="Toggle on" style="font-size: 1.5em; cursor: pointer;"></i></div></div><div class="hidden flex"><select><option value="0">3:3</option><option value="1">2:2</option><option value="2">3:2</option><option value="3">4:4</option><option value="4">4:3</option></select><input type="range" min="0" max="1" step="0.02" value="0.75" style="margin: 0px 0px 0px 0.5em;"></div></li><li><div class="flex"><div>Aspect ratio</div><div data-id="aspectRatioMask" style="text-align: right" class="grid-overlay-toggle-btn"><i class="fa fa-toggle-off" title="Toggle on" style="font-size: 1.5em; cursor: pointer;"></i></div></div><div class="hidden flex"><select><option value="0">2.39:1</option><option value="1">2.35:1</option><option value="2">16:9</option><option value="3">4:3</option><option value="4">3:2</option><option value="5">1:1</option><option value="5" class="capture-slider-value">9:16</option></select><input type="range" min="0" max="1" step="0.02" value="0.75" style="margin: 0px 0px 0px 0.5em;"></div></li></ul>
+            </div>
+          </div>
+
+          <!--Export Options-->
+          <div id="exportTab" class="tab-pane">
+            <div class="sidebar-item" id="export-header">
+              <div class="sidebar-header">
+                <h2>
+                  <i class="fa fa-download fa-fw"></i> Export</h2>
+              </div>
+              <ul>
+                <li>Render current take as a video file:</li>
+                <li class="sidebar-opt">
+                  <i class="fa fa-sort-asc fa-rotate-90 sidebar-link-dot"></i>
+                  <span id="btn-dir-change">Export Video</span>
+                </li>
+              </ul>
+
+              <ul>
+                <li>Confirm current take:</li>
+                <li class="sidebar-opt">
+                  <i class="fa fa-sort-asc fa-rotate-90 sidebar-link-dot"></i>
+                  <span id="btn-dir-change">Confirm Take</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
