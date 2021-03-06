@@ -2,7 +2,7 @@
 
 aside {
   padding: 0;
-  width: 29.5em;
+  width: 28.7em;
 }
 
 aside ul {
@@ -16,6 +16,11 @@ aside li {
 label {
   display: inline-block;
   margin-bottom: 0.25em;
+}
+
+#animatorSidebar {
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-item {
@@ -105,8 +110,15 @@ label {
 
 /** Tabs Content **/
 
+.tabs-content {
+  flex: 1;
+  overflow: hidden;
+}
+
 .tab-pane {
   display: none;
+  height: 100%;
+  overflow: auto;
 }
 
 .tab-pane.active {

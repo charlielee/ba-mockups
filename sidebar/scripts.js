@@ -16,8 +16,8 @@ window.addEventListener("load", function () {
 
       activeTab.classList.remove("active");
       activeTabPane.classList.remove("active");
-      newTab.classList.add("active", true);
-      newTabPane.classList.add("active", true);
+      newTab.classList.add("active");
+      newTabPane.classList.add("active");
     }
 
     e.preventDefault();
