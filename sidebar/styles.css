@@ -5,6 +5,10 @@ aside {
   width: 29.5em;
 }
 
+aside ul {
+  line-height: 1.0;
+}
+
 aside li {
   margin: 0.75em 0;
 }
@@ -124,5 +128,5 @@ label {
 }
 
 .capture-slider-value {
-  width: 4em;
+  width: 3.5em;
 }
