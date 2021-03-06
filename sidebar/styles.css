@@ -2,7 +2,7 @@
 
 aside {
   padding: 0;
-  width: 32em;
+  width: 30em;
 }
 
 aside li {
@@ -67,8 +67,10 @@ label {
 }
 
 .tabs a {
+  align-items: center;
   border: 1px solid transparent;
   border-radius: 5px 5px 0 0;
+  display: flex;
   font-size: 0.9em;
   margin-bottom: -1px;
   padding: 0.75em;
