@@ -19,6 +19,7 @@ label {
 }
 
 #animatorSidebar {
+  border: 0;
   display: flex;
   flex-direction: column;
 }
@@ -141,4 +142,34 @@ label {
 
 .capture-slider-value {
   width: 3.5em;
+}
+
+/** Panel Expand Symbol **/
+
+.panel-expander {
+  background-color:#423e3e;
+  color: #5C5858;
+  cursor: col-resize;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.2em;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+}
+
+.panel-expander:hover {
+  background-color: #5C5858;
+  color:#423e3e;
+}
+
+.panel-expander:active {
+  background-color: #827E7E;
+  color:#5C5858;
+}
+
+
+
+.panel-expander i {
+  margin: 0.5em;
 }
