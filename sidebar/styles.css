@@ -29,7 +29,7 @@ label {
   display: flex;
   overflow: hidden;
   /*TOGO*/
-  width: 20em;
+  /* width: 20em; */
 }
 
 .sidebar-item {
