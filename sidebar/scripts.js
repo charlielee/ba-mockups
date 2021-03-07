@@ -29,4 +29,6 @@ window.addEventListener("load", function () {
   document.querySelector("#openSettingsModalBtn").addEventListener("click", function () {
     alert("Some cool modal full of settings will one day appear here.")
   });
+
+  /** Sidebar resize */
 });
