@@ -1,5 +1,9 @@
 /** Overrides **/
 
+body {
+  font-size: 0.8em;
+}
+
 aside {
   padding: 0;
   width: 29.1em;
@@ -10,12 +14,12 @@ aside ul {
 }
 
 aside li {
-  margin: 0.75em 0;
+  margin: 0.5em 0;
 }
 
 label {
   display: inline-block;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.4em;
 }
 
 #animatorSidebar {
@@ -64,6 +68,10 @@ label {
 
 .table tbody tr:nth-child(even) {
   background-color: rgba(23, 23, 23 , 0.8);
+}
+
+.table i {
+  font-size: 0.8em;
 }
 
 /** Tabs **/
@@ -141,7 +149,7 @@ label {
 }
 
 .capture-slider-group input[type="range"] {
-  flex: 1;
+  flex: 2;
 }
 
 .capture-slider-value {
@@ -159,7 +167,6 @@ label {
   font-size: 0.2em;
   height: 100%;
   justify-content: center;
-  /* position: absolute; */
 }
 
 .panel-expander:hover {
