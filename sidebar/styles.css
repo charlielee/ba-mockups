@@ -6,7 +6,7 @@ body {
 
 aside {
   padding: 0;
-  width: 26.3em;
+  width: 25em;
 }
 
 aside ul {
@@ -28,8 +28,8 @@ label {
   border: 0;
   display: flex;
   overflow: hidden;
-  /*TOGO*/
-  /* width: 20em; */
+  /** Sidebar will use whatever the width of the tabs is **/
+  width: auto;
 }
 
 .sidebar-item {
@@ -91,6 +91,7 @@ label {
   display: flex;
   margin: 0;
   padding: 0.3em 0.3em 0 0.3em;
+  width: 100%;
 }
 
 .tabs a {
@@ -129,22 +130,23 @@ label {
 /** Tabs Content **/
 
 .tabs-container {
+  align-content: flex-start;
+  display: flex;
   flex: 1;
-  overflow: auto;
+  flex-wrap: wrap;
 }
 
 .tabs-content {
-  overflow: hidden;
-  width: 100%;
+  flex: 1;
+  width: 1px;
 }
 
 .tab-pane {
   display: none;
-  overflow: auto;
 }
 
 .tab-pane.active {
-  display: inherit;
+  display: block;
 }
 
 /** Capture sliders **/
