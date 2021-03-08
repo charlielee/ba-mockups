@@ -130,7 +130,6 @@ label {
 /** Tabs Content **/
 
 .tabs-container {
-  align-content: flex-start;
   display: flex;
   flex: 1;
   flex-direction: column;
