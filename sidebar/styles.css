@@ -27,7 +27,7 @@ label {
 #animatorSidebar {
   border: 0;
   display: flex;
-  overflow: hidden;
+  overflow: auto;
   /** Sidebar will use whatever the width of the tabs is **/
   width: auto;
 }
@@ -39,6 +39,7 @@ label {
 
 .btn {
   flex-direction: column;
+  padding: 0.25em 1px;
 }
 
 .btn small {
@@ -133,11 +134,13 @@ label {
   align-content: flex-start;
   display: flex;
   flex: 1;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .tabs-content {
   flex: 1;
+  min-width: 100%;
+  overflow: auto;
   width: 1px;
 }
 
