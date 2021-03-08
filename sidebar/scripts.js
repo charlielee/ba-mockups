@@ -48,6 +48,8 @@ window.addEventListener("load", function () {
 
       sidebar.style.width = `${sidebarWidth + xChange}px`;
       dragSidebarCurXPosition = e.pageX;
+
+      document.body.style.cursor = "ew-resize";
     }
   });
 
@@ -55,6 +57,7 @@ window.addEventListener("load", function () {
     if (isDraggingSidebar) {
       isDraggingSidebar = false;
       dragSidebarCurXPosition = 0;
+      document.body.style.cursor = "default";
     }
   });
 });

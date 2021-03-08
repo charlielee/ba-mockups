@@ -176,7 +176,7 @@ label {
 .panel-expander {
   background-color:#423e3e;
   color: #5C5858;
-  cursor: col-resize;
+  cursor: ew-resize;
   display: flex;
   flex-direction: column;
   font-size: 0.2em;
