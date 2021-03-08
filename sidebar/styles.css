@@ -27,7 +27,6 @@ label {
 #animatorSidebar {
   border: 0;
   display: flex;
-  overflow: auto;
   /** Sidebar will use whatever the width of the tabs is **/
   width: auto;
 }
@@ -138,14 +137,17 @@ label {
 }
 
 .tabs-content {
+  display: flex;
   flex: 1;
   min-width: 100%;
-  overflow: auto;
+  overflow: hidden;
   width: 1px;
 }
 
 .tab-pane {
   display: none;
+  flex: 1;
+  overflow: auto;
 }
 
 .tab-pane.active {
