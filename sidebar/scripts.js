@@ -31,4 +31,30 @@ window.addEventListener("load", function () {
   });
 
   /** Sidebar resize */
+  let sidebarResizer = document.querySelector("#resizeAnimatorSidebar");
+  let sidebar = document.querySelector("#animatorSidebar");
+  let isDraggingSidebar = false;
+  let dragSidebarCurXPosition = 0;
+
+  sidebarResizer.addEventListener("mousedown", function (e) {
+    isDraggingSidebar = true;
+    dragSidebarCurXPosition = e.pageX;
+  });
+
+  document.addEventListener("mousemove", function (e) {
+    if (isDraggingSidebar) {
+      let xChange = dragSidebarCurXPosition - e.pageX;
+      let sidebarWidth = sidebar.offsetWidth;
+
+      sidebar.style.width = `${sidebarWidth + xChange}px`;
+      dragSidebarCurXPosition = e.pageX;
+    }
+  });
+
+  document.addEventListener("mouseup", function () {
+    if (isDraggingSidebar) {
+      isDraggingSidebar = false;
+      dragSidebarCurXPosition = 0;
+    }
+  });
 });
