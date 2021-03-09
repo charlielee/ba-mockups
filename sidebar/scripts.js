@@ -29,35 +29,4 @@ window.addEventListener("load", function () {
   document.querySelector("#openSettingsModalBtn").addEventListener("click", function () {
     alert("Some cool modal full of settings will one day appear here.")
   });
-
-  /** Sidebar resize */
-  let sidebarResizer = document.querySelector("#resizeAnimatorSidebar");
-  let sidebar = document.querySelector("#animatorSidebar");
-  let isDraggingSidebar = false;
-  let dragSidebarCurXPosition = 0;
-
-  sidebarResizer.addEventListener("mousedown", function (e) {
-    isDraggingSidebar = true;
-    dragSidebarCurXPosition = e.pageX;
-  });
-
-  document.addEventListener("mousemove", function (e) {
-    if (isDraggingSidebar) {
-      let xChange = dragSidebarCurXPosition - e.pageX;
-      let sidebarWidth = sidebar.offsetWidth;
-
-      sidebar.style.width = `${sidebarWidth + xChange}px`;
-      dragSidebarCurXPosition = e.pageX;
-
-      document.body.style.cursor = "ew-resize";
-    }
-  });
-
-  document.addEventListener("mouseup", function () {
-    if (isDraggingSidebar) {
-      isDraggingSidebar = false;
-      dragSidebarCurXPosition = 0;
-      document.body.style.cursor = "default";
-    }
-  });
 });

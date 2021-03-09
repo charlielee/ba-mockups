@@ -2,6 +2,7 @@
 
 body {
   font-size: 0.8em;
+  touch-action: none;
 }
 
 aside {
@@ -29,6 +30,10 @@ label {
   display: flex;
   /** Sidebar will use whatever the width of the tabs is **/
   width: auto;
+}
+
+#animatorSidebar.hidden {
+  display: none;
 }
 
 .sidebar-item {
