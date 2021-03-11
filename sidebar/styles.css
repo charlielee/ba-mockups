@@ -23,6 +23,10 @@ label {
   margin-bottom: 0.4em;
 }
 
+.cursor-ew-resize {
+  cursor: ew-resize !important;
+}
+
 /** General **/
 
 #animatorSidebar {
@@ -30,6 +34,7 @@ label {
   display: flex;
   /** Sidebar will use whatever the width of the tabs is **/
   width: auto;
+  max-width: 50vw;
 }
 
 #animatorSidebar.hidden {

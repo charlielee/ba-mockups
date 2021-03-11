@@ -6,11 +6,15 @@ window.addEventListener("load", function () {
 
 class SidebarResize {
   constructor() {
+    this.elSidebarResizer = document.querySelector("#resizeAnimatorSidebar");
+    this.elSidebar = document.querySelector("#animatorSidebar");
+
     this.isDragging = false;
     this.curXPosition = null;
 
-    this.elSidebarResizer = document.querySelector("#resizeAnimatorSidebar");
-    this.elSidebar = document.querySelector("#animatorSidebar");
+    this.minimumWidthClose = 100;
+    this.minimumWidthStick = 200;
+    this.maximumWidth = 800;
   }
 
   init() {
@@ -46,7 +50,6 @@ class SidebarResize {
   startResize(curX) {
     this.isDragging = true;
     this.curXPosition = curX;
-    this._open();
   }
 
   /**
@@ -54,18 +57,31 @@ class SidebarResize {
    * @param {Integer} newX The position to move the sidebar to
    */
   resize(newX) {
+    let pageWidth = window.innerWidth;
     let xChange = this.curXPosition - newX;
+    let widthFromEdgeOfPage = pageWidth - this.curXPosition;
     this.curXPosition = newX;
 
-    if (Math.abs(xChange) < 100) {
-      let sidebarWidth = this.elSidebar.offsetWidth;
-      this.elSidebar.style.width = `${sidebarWidth + xChange}px`;
-      document.body.style.cursor = "ew-resize";
+    // Cancel is something silly is happening
+    if (Math.abs(xChange) > 100) return;
+
+    // Set cursor
+    document.body.classList.add("cursor-ew-resize")
+
+    // Resize to new width if between max and min sticky width
+    if (widthFromEdgeOfPage < this.maximumWidth && widthFromEdgeOfPage >= this.minimumWidthStick) {
+      this.elSidebar.style.width = `${widthFromEdgeOfPage}px`;
     }
 
-    console.log("this.elSidebar.offsetWidth", xChange, this.elSidebar.offsetWidth);
-    if (xChange < 0 && this.elSidebar.offsetWidth <= 100) {
+    // Close if shrinking sidebar
+    if (xChange < 0 && widthFromEdgeOfPage <= this.minimumWidthClose) {
       this._close();
+      this.finishResize();
+    }
+
+    // Open if expanding sidebar
+    if (xChange > 0 && widthFromEdgeOfPage > this.minimumWidthClose) {
+      this._open();
     }
   }
 
@@ -75,7 +91,15 @@ class SidebarResize {
   finishResize() {
     this.isDragging = false;
     this.curXPosition = null;
-    document.body.style.cursor = "default";
+    document.body.classList.remove("cursor-ew-resize")
+  }
+
+  /**
+   * Reset the sidebar to it's original width
+   */
+    reset() {
+    this.elSidebar.style.width = "auto";
+    this._open();
   }
 
   /**
@@ -86,21 +110,9 @@ class SidebarResize {
   }
 
   /**
-   * Opens a closed sidebar 
+   * Opens a closed sidebar
    */
   _open() {
-    // this.elSidebar.style.width = "auto";
     this.elSidebar.classList.remove("hidden");
-  }
-
-  /**
-   * Reset the sidebar to it's original width
-   */
-  reset() {
-    this.elSidebar.style.width = "auto";
-  }
-
-  _getCurrentWidth() {
-
   }
 }
